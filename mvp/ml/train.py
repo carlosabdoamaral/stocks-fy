@@ -20,9 +20,9 @@ from yellowbrick.classifier import ConfusionMatrix
 # "AMOUNT",
 # "AVG_AMOUNT_MONTH",
 # "USE_ECOMMERCE",
-# "LAST_STOCK_BOUGHT_TAG",
-# "LAST_STOCK_BOUGHT_NAME", **
-# "LAST_STOCK_BOUGHT_CATEGORY"
+# "STOCK_TO_BUY_TAG",
+# "STOCK_TO_BUY_NAME", **
+# "STOCK_TO_BUY_CATEGORY"
 
 # "FULLNAME",
 # "EMAIL",
@@ -34,8 +34,8 @@ from yellowbrick.classifier import ConfusionMatrix
 # "AMOUNT",
 # "AVG_AMOUNT_MONTH",
 # "USE_ECOMMERCE",
-# "LAST_STOCK_BOUGHT_TAG",
-# "LAST_STOCK_BOUGHT_CATEGORY"
+# "STOCK_TO_BUY_TAG",
+# "STOCK_TO_BUY_CATEGORY"
 
 
 def trainModel():
@@ -46,9 +46,9 @@ def trainModel():
         'BIRTHDATE_MONTH',
         'CURRENCY_NAME',
         'COUNTRY_NAME',
-        'LAST_STOCK_BOUGHT_NAME',
+        'STOCK_TO_BUY_NAME',
     ])
-    base.LAST_STOCK_BOUGHT_TAG.unique()
+    base.STOCK_TO_BUY_TAG.unique()
 
     x = base.iloc[:,[0,1,2,3,4,5,6,7,8,9,11]].values
     y = base.iloc[:,10].values
@@ -66,7 +66,7 @@ def trainModel():
     x[:,9] = encoder.fit_transform(x[:,9])
     x[:,10] = encoder.fit_transform(x[:,10])
 
-    xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.5,random_state=1)
+    xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.3,random_state=0)
     model = GaussianNB()
     model.fit(xtrain, ytrain)
     predicts = model.predict(xtest)
@@ -84,3 +84,5 @@ def trainModel():
     confusao.fit(xtrain, ytrain)
     confusao.score(xtest, ytest)
     confusao.poof()
+
+trainModel()

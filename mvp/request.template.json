@@ -1,0 +1,53 @@
+[
+    {
+        "id" : null,
+        "fullname" : "fullname",
+        "email" : "",
+
+        "birthdate" : {
+            "day" : 0,
+            "month" : 0,
+            "year" : 0
+        },
+
+        "country" : {
+            "name" : "",
+            "abbreviation" : ""
+        },
+
+        "phone" : {
+            "ddd" : "",
+            "os" : ""
+        },
+
+        "money" : {
+            "currency" : {
+                "id" : 0,
+                "name" : ""
+            },
+
+            "current_amount" : 10000000,
+            "avg_amount_month" : 3000
+        },
+
+        "use_ecommerce" : false,
+
+        
+    }
+]
+
+# "BIRTHDATE_DAY", **
+# "BIRTHDATE_MONTH", **
+# "BIRTHDATE_YEAR",
+# "COUNTRY_NAME", **
+# "COUNTRY_ABBREVIATION",
+# "DDD",
+# "MOBILE_DEVICE_OS",
+# "CURRENCY_ID",
+# "CURRENCY_NAME", **
+# "AMOUNT",
+# "AVG_AMOUNT_MONTH",
+# "USE_ECOMMERCE",
+# "LAST_STOCK_BOUGHT_TAG",
+# "LAST_STOCK_BOUGHT_NAME", **
+# "LAST_STOCK_BOUGHT_CATEGORY"
