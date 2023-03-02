@@ -1,0 +1,17 @@
+{
+  "birthdate": "2023-03-02",
+  "id_country": 1,
+  "id_currency": 1,
+  "id_most_used_ecommerce": 1,
+  "id_risk_profile": 1,
+  "id_school_level": 1,
+  "id_last_stock": 1,
+  "id_pretend_stock": 1,
+  "fullname": "Carlos",
+  "email": "carlos@gmail.com",
+  "ddd": "99",
+  "phone": "999999999",
+  "gender": "MALE",
+  "mobile_device_os": "IOS",
+  "current_job_category": "TECHNOLOGY"
+}
